@@ -4,7 +4,7 @@
 
 ***
 
-django queryset export allows you to export records of a queryset as csv , xml files 
+django queryset export allows you to export records of a queryset as csv , xml files with ajax request without reloading page 
 
 ###Installation
 ------------
@@ -42,4 +42,5 @@ and in the end :
 
 ##Other
 
-for exporting records by filter just need to pass your filters in url as GET params 
+* for exporting records by filter just need to pass your filters in url as GET params 
+* app_name and model_name for better security is crypting
