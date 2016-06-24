@@ -16,10 +16,10 @@ class Exporter(object):
         for field, value in self._filters.items():
             qset &= Q(**{field: value})
         if qset:
-            queryset = self._model.objects.filter(user_id=self._request.user.id).filter(qset).only(
+            queryset = self._model.objects.filter(qset).only(
                 *self._model._meta.export_columns)
         else:
-            queryset = self._model.objects.filter(user_id=self._request.user.id).only(
+            queryset = self._model.objects.only(
                 *self._model._meta.export_columns)
 
         return queryset

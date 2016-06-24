@@ -1,5 +1,5 @@
 <div class="dropdown pull-left">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+  <button class="btn btn-default dropdown-toggle" type="button" id="export_dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     {{ btn_text }}
     <span class="caret"></span>
   </button>
@@ -18,7 +18,7 @@
     $('#export-xls').click(function(){send_export_request('xls')});
 
     function send_export_request(export_type) {
-        var filters = JSON.stringify(getUrlVars())
+        var filters = JSON.stringify(getUrlVars()) ;
 
         $('<form action="/export/" method="POST"/>')
         .append($('<input type="hidden" name="type" value="' + export_type + '">'))
