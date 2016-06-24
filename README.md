@@ -37,7 +37,7 @@ then load export tag to your template
 and in the end :
 
 ```
-{% exporter "btn_text" "model_name" "app_name" %}
+{% exporter "btn_text" "app_name" "model_name" %}
 ```
 
 ##Other
