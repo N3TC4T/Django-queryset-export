@@ -4,7 +4,7 @@ from django.core import signing
 register = template.Library()
 
 
-@register.inclusion_tag('export/exporter.html', takes_context=False)
+@register.inclusion_tag('qs_export/exporter.html', takes_context=False)
 def exporter(btn_text, app_name, model_name ):
     """
     Usage: {% exporter "btn text" "app_name" "model_name" %}
