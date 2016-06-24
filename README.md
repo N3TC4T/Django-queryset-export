@@ -19,4 +19,27 @@ Add ``options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('export_columns', 'export
 
 ###Usage
 
+add ``export_columns`` and ``exportable`` tags to your model to give it export permission and exportable columns
 
+```
+class Meta:
+        app_label = 'test'
+        export_columns = ('col1', 'col2', 'col3', 'col4')
+        exportable = True
+```
+
+then load export tag to your template
+
+```
+{% load export_tags %}
+```
+
+and in the end :
+
+```
+{% exporter "btn_text" "model_name" "app_name" %}
+```
+
+##Other
+
+for exporting records by filter just need to pass your filters in url as GET params 
