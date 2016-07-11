@@ -15,6 +15,8 @@ django queryset export allows you to export records of a queryset as csv , xml f
 
 * Add ``qs_export`` to your ``INSTALLED_APPS`` setting.
 
+* Add qs_export.urls to your urls.py.
+
 * Add ``options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('export_columns', 'exportable',)`` to your  setting.
 
 ###Usage
