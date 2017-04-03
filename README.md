@@ -6,7 +6,7 @@
 
 django queryset export allows you to export records of a queryset as csv , xml files with ajax request without reloading page 
 
-###Installation
+### Installation
 ------------
 
 * Install ``tablib`` as required module
@@ -19,7 +19,7 @@ django queryset export allows you to export records of a queryset as csv , xml f
 
 * Add ``options.DEFAULT_NAMES = options.DEFAULT_NAMES + ('export_columns', 'exportable',)`` to your  setting.
 
-###Usage
+### Usage
 
 add ``export_columns`` and ``exportable`` tags to your model to give it export permission and exportable columns
 
@@ -42,7 +42,7 @@ and in the end :
 {% exporter "btn_text" "app_name" "model_name" %}
 ```
 
-##Other
+## Other
 
 * for exporting records by filter just need to pass your filters in url as GET params 
 * app_name and model_name for better security is crypting
